@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
+import AppointmentReducer from './features/AppointmentReducer';
 import DateReducer from './features/DateReducer';
-import EventReducer from './features/EventReducer';
 
 const store = configureStore({
     reducer: {
-        events: EventReducer,
+        appointments: AppointmentReducer,
         selectedDate: DateReducer
     }
 });

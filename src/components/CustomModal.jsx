@@ -1,17 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+import ReactDOM from 'react-dom';
 import { GrClose } from 'react-icons/gr'
 
-export default function CustomModal({ showModal, setShowModal }) {
-    return (
+export default function CustomModal({ showModal, toggleModal, children }) {
+    return ReactDOM.createPortal(
         <ModalWrapper showModal={showModal}>
             <Modal>
-                <CloseButton onClick={() => setShowModal(false)}>
+                <CloseButton onClick={toggleModal}>
                     <GrClose />
                 </CloseButton>
-                <h1>hello</h1>
+                {children}
             </Modal>
-        </ModalWrapper>
+        </ModalWrapper>,
+        document.getElementById('modal')
     )
 }
 
@@ -23,7 +25,7 @@ export const ModalWrapper = styled.div`
     bottom:0;
     right:0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
+    z-index: 1;
     justify-content: center;
     align-items: start;
     animation: popup .3s;
@@ -40,10 +42,12 @@ export const ModalWrapper = styled.div`
 export const Modal = styled.div`
     position: relative;
     background-color: #fff;
-    height: 30vh;
-    width: 50vw;
+    min-height: 30vh;
+    min-width: 30vw;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 10px;
-    padding: 2% 4%;
+    padding: 1% 2%;
     margin-top: 7%;
 `
 

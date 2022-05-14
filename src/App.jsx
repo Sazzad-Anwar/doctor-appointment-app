@@ -6,10 +6,10 @@ import RootRoute from './screens/RootRoute';
 import Error from './components/Error';
 
 export const AppRoot = styled.div`
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     padding: 2rem 5%;
-    overflow: hidden;
+    overflow: auto;
     font-family: 'Poppins', sans-serif !important;
 `
 
