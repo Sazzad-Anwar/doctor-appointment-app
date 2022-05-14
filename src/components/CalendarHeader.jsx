@@ -73,6 +73,11 @@ export default function CalendarHeader() {
         toggleModal()
     }
 
+    //disable previous date
+    const disabledDate = current => {
+        return current && current < dayjs().startOf('day');
+    }
+
     //Get the months array
     useEffect(() => {
         setMonths(new Array(12).fill({}).map((_, index) => ({ index: index + 1, name: dayjs().month(index).format('MMMM') })
@@ -147,7 +152,7 @@ export default function CalendarHeader() {
                                 name="date"
                                 control={control}
                                 rules={{ required: true }}
-                                render={({ field }) => <DatePicker {...field} size='large' />}
+                                render={({ field }) => <DatePicker disabledDate={disabledDate} {...field} size='large' />}
                             />
                             {errors.date && <ErrorMessage><FiAlertTriangle /> Date is required</ErrorMessage>}
                         </InputDiv>
