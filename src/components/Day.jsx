@@ -163,7 +163,6 @@ export const DayCell = styled.div`
   width: 100%;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
   background-color: ${({ thisMonth, today }) => {
     if (today && thisMonth) {
       return "#dddd";
