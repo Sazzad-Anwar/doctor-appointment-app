@@ -174,11 +174,19 @@ export default function CalendarHeader() {
               </InputDiv>
               <InputDiv>
                 <InputLabel>Gender</InputLabel>
-                <Radio.Group {...register("gender", { required: true })}>
-                  <Radio value="male">Male</Radio>
-                  <Radio value="female">Female</Radio>
-                  <Radio value="other">Other</Radio>
-                </Radio.Group>
+
+                <Controller
+                  name="gender"
+                  control={control}
+                  rules={{ required: true }}
+                  render={({ field }) => (
+                    <Radio.Group {...field}>
+                      <Radio value="Male">Male</Radio>
+                      <Radio value="Female">Female</Radio>
+                      <Radio value="Other">Other</Radio>
+                    </Radio.Group>
+                  )}
+                />
                 {errors.gender && (
                   <ErrorMessage>
                     <FiAlertTriangle /> Gender is required
@@ -275,7 +283,16 @@ export const Wrapper = styled.div`
 export const ModalTitle = styled.h1`
   font-size: 1.5rem;
   font-weight: 500;
-  color: #6e6d6d;
+  padding: 3% 8% 3% 8%;
+  background-color: #1890ff;
+  color: #fff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  @media (max-width: 1600px) {
+    font-size: 1.3rem;
+    max-width: 70ch;
+  }
 `;
 
 export const ModalBody = styled.div`
@@ -283,7 +300,8 @@ export const ModalBody = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 1rem;
+  padding: 0% 7% 5% 7%;
+  overflow: auto;
 `;
 
 export const InputDiv = styled.div`

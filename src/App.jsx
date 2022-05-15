@@ -12,7 +12,7 @@ export const AppRoot = styled.div`
   overflow: auto;
   font-family: "Poppins", sans-serif !important;
   @media (max-width: 1600px) {
-    padding: 2rem 3%;
+    padding: 2rem 2%;
   }
   @media (max-width: 1200px) {
     padding: 2rem 1%;

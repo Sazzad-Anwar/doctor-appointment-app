@@ -96,29 +96,48 @@ export default function Day({ day }) {
       {/* Modal */}
       <Suspense fallback={<Loader />}>
         <CustomModal showModal={showModal} toggleModal={toggleModal}>
-          <ModalTitle>
-            Appointment Details of {appointMentDetails.name}
-          </ModalTitle>
+          <ModalTitle>Appointment Details</ModalTitle>
           <ModalBody>
             <ModalContent>
-              <p>
-                Name: <b>{appointMentDetails.name}</b>
-              </p>
-              <p>
-                Age: <b>{appointMentDetails.age}</b>
-              </p>
-              <p>
-                Gender: <b>{appointMentDetails.gender}</b>
-              </p>
-              <p>
-                Appointment Date: <b>{appointMentDetails.date}</b>
-              </p>
-              <p>
-                Appointment Time: <b>{appointMentDetails.time}</b>
-              </p>
-              <p>
-                Appointment ID: <b>{appointMentDetails.id}</b>
-              </p>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Name</td>
+                    <td>
+                      : <b>{appointMentDetails.name}</b>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Age</td>
+                    <td>
+                      : <b>{appointMentDetails.age}</b>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Gender</td>
+                    <td>
+                      : <b>{appointMentDetails.gender}</b>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Date</td>
+                    <td>
+                      : <b>{appointMentDetails.date}</b>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Time</td>
+                    <td>
+                      : <b>{appointMentDetails.time}</b>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <CloseButton>
+                <Button type="primary" size="middle" onClick={toggleModal}>
+                  Close
+                </Button>
+              </CloseButton>
             </ModalContent>
           </ModalBody>
         </CustomModal>
@@ -156,6 +175,9 @@ export const DayCell = styled.div`
   }};
   :hover {
     background-color: #dddd;
+  }
+  @media (max-width: 1600px) {
+    height: 100px;
   }
 `;
 
@@ -232,7 +254,7 @@ export const UserDetails = styled.span`
   }
   @media (max-width: 1600px) {
     :nth-child(1) {
-      max-width: 10ch;
+      max-width: 8ch;
     }
   }
 `;
@@ -242,10 +264,27 @@ export const ModalContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  & p {
-    font-size: 20px;
+  table {
+    border: none;
+    width: 100%;
+  }
+  table td:nth-child(1) {
+    width: 30%;
+  }
+  table td:nth-child(2) {
+    width: 70%;
+  }
+  table td {
+    font-size: 19px;
     font-weight: 500;
-    margin-bottom: 7px;
+    padding: 5px 0;
     color: #6e6d6d;
   }
+`;
+
+export const CloseButton = styled.div`
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  margin-top: 0.5rem;
 `;

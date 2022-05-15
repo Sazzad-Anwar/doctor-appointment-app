@@ -8,7 +8,7 @@ export default function CustomModal({ showModal, toggleModal, children }) {
     <ModalWrapper showModal={showModal}>
       <Modal>
         <CloseButton onClick={toggleModal}>
-          <GrClose />
+          <GrClose color="#1890ff" />
         </CloseButton>
         {children}
       </Modal>
@@ -24,6 +24,7 @@ export const ModalWrapper = styled.div`
   left: 0;
   bottom: 0;
   right: 0;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
   justify-content: center;
@@ -42,13 +43,27 @@ export const ModalWrapper = styled.div`
 export const Modal = styled.div`
   position: relative;
   background-color: #fff;
+  overflow: hidden;
   min-height: 30vh;
-  min-width: 30vw;
-  max-width: 100%;
-  max-height: 100%;
+  min-width: 25vw;
+  max-width: 80%;
+  max-height: 80%;
   border-radius: 10px;
-  padding: 1% 2%;
-  margin-top: 7%;
+  margin: 2% auto;
+  @media (max-width: 1600px) {
+    margin: 1% auto;
+    min-height: 28vh;
+    min-width: 33vw;
+  }
+  @media (max-width: 1200px) {
+    margin: 0% auto;
+    min-height: 50vh;
+    min-width: 50vw;
+  }
+  @media (max-width: 1024px) {
+    min-height: 50vh;
+    min-width: 50vw;
+  }
 `;
 
 export const CloseButton = styled.button`
