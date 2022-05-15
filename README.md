@@ -11,15 +11,15 @@ This is one page application for booking appointment of doctor using monthly vie
 
 # Libraries
 
--   `React.js`
--   `Redux`
--   `Redux Toolkit`
--   `Ant Design`
--   `Dayjs`
--   `React-hook-form`
--   `React-icons`
--   `Styled Components`
--   `Uuid`
+- `React.js`
+- `Redux`
+- `Redux Toolkit`
+- `Ant Design`
+- `Dayjs`
+- `React-hook-form`
+- `React-icons`
+- `Styled Components`
+- `Uuid`
 
 # Installation
 

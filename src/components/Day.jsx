@@ -53,7 +53,9 @@ export default function Day({ day }) {
           dayjs(appointment.date).format("MM").toString() ===
             day.format("MM").toString() &&
           dayjs(appointment.date).format("DD").toString() ===
-            day.format("DD").toString()
+            day.format("DD").toString() &&
+          dayjs(appointment.date).format("YYYY").toString() ===
+            day.format("YYYY").toString()
       )
     );
   }, [day, appointments]);
