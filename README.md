@@ -9,15 +9,15 @@ This is one page application for booking appointment of doctor using monthly vie
 
 # Libraries
 
-- `React.js`
-- `Redux`
-- `Redux Toolkit`
-- `Ant Design`
-- `Dayjs`
-- `React-hook-form`
-- `React-icons`
-- `Styled Components`
-- `Uuid`
+-   `React.js`
+-   `Redux`
+-   `Redux Toolkit`
+-   `Ant Design`
+-   `Dayjs`
+-   `React-hook-form`
+-   `React-icons`
+-   `Styled Components`
+-   `Uuid`
 
 # Installation
 
@@ -50,5 +50,5 @@ yarn preview
 After the installation and running the application, you can browse the application by opening the browser and typing the following URL.
 
 ```bash
-http://localhost:3000
+http://localhost:4173
 ```
