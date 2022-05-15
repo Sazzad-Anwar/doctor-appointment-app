@@ -176,8 +176,14 @@ export const DayCell = styled.div`
   :hover {
     background-color: #dddd;
   }
+  @media (max-width: 1750px) {
+    height: 130px;
+  }
   @media (max-width: 1600px) {
-    height: 100px;
+    height: 120px;
+  }
+  @media (max-width: 1400px) {
+    height: 120px;
   }
 `;
 
@@ -196,8 +202,12 @@ export const DateText = styled.p`
 
 export const DateInfo = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 1139px) {
+    flex-direction: column;
+  }
 `;
 
 export const TotalAppointment = styled.p`
@@ -221,6 +231,15 @@ export const EventTagWrapper = styled.div`
     background-color: #aaaa;
     outline: 1px solid #eeee;
     border-radius: 7px;
+  }
+  @media (max-width: 1600px) {
+    height: 75%;
+  }
+  @media (max-width: 1400px) {
+    height: 70%;
+  }
+  @media (max-width: 1139px) {
+    height: 58%;
   }
 `;
 
