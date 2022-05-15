@@ -85,7 +85,6 @@ export default function Day({ day }) {
                     }}
                   >
                     <UserDetails>{appointment.name}</UserDetails>
-                    <UserDetails>Age-{appointment.age}</UserDetails>
                     <UserDetails>{appointment.time}</UserDetails>
                   </EventTag>
                 ))}
@@ -204,12 +203,15 @@ export const EventTagWrapper = styled.div`
 `;
 
 export const EventTag = styled(Button)`
-  padding: 0.3rem 1.5rem;
+  padding: 0.3rem 1rem;
   text-align: left;
   margin-bottom: 3px;
   color: #ffff;
   font-size: 14px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #1890ff;
 `;
 
@@ -222,6 +224,17 @@ export const Details = styled.span`
 export const UserDetails = styled.span`
   font-weight: bold;
   margin-right: 0.5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  :nth-child(1) {
+    max-width: 15ch;
+  }
+  @media (max-width: 1600px) {
+    :nth-child(1) {
+      max-width: 10ch;
+    }
+  }
 `;
 
 export const ModalContent = styled.div`

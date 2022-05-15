@@ -274,7 +274,8 @@ export const Wrapper = styled.div`
 
 export const ModalTitle = styled.h1`
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
+  color: #6e6d6d;
 `;
 
 export const ModalBody = styled.div`
