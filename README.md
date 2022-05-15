@@ -11,15 +11,15 @@ This is one page application for booking appointment of doctor using monthly vie
 
 # Libraries
 
-- `React.js`
-- `Redux`
-- `Redux Toolkit`
-- `Ant Design`
-- `Dayjs`
-- `React-hook-form`
-- `React-icons`
-- `Styled Components`
-- `Uuid`
+-   `React.js`
+-   `Redux`
+-   `Redux Toolkit`
+-   `Ant Design`
+-   `Dayjs`
+-   `React-hook-form`
+-   `React-icons`
+-   `Styled Components`
+-   `Uuid`
 
 # Installation
 
@@ -35,7 +35,19 @@ or using `yarn`
 yarn
 ```
 
-After installing the dependencies, you can run the application by running the following command.
+After installing the dependencies, follow the below command to make build the application.
+
+```bash
+yarn build
+```
+
+or using `yarn`
+
+```bash
+yarn build
+```
+
+After building the project, you can run the application by running the following command.
 
 ```bash
 npm run preview
