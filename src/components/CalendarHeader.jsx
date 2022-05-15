@@ -302,10 +302,11 @@ export const ModalBody = styled.div`
   justify-content: center;
   padding: 0% 7% 5% 7%;
   overflow: auto;
+  max-height: 100%;
 `;
 
 export const InputDiv = styled.div`
-  margin: 0.5rem 0;
+  margin: 0.7rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
