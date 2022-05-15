@@ -250,7 +250,7 @@ export const UserDetails = styled.span`
   text-overflow: ellipsis;
   overflow: hidden;
   :nth-child(1) {
-    max-width: 15ch;
+    max-width: 14ch;
   }
   @media (max-width: 1600px) {
     :nth-child(1) {
