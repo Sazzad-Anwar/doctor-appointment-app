@@ -38,7 +38,7 @@ yarn
 After installing the dependencies, follow the below command to make build the application.
 
 ```bash
-yarn build
+npm run build
 ```
 
 or using `yarn`
